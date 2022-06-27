@@ -104,10 +104,6 @@ int main() {
 
 // What are some of the operations supported by std::vector?
 
-    vector <string> junk;
-
-    string stud = junk[1];
-
 //    size_t size() const;
 //    void push_back(const ItemType &item);  // append
 //    iterator erase(iterator index);
@@ -126,9 +122,9 @@ int main() {
     names.emplace_back("Mark");
     names.emplace_back("John");
 
-    print(names);
-
-    print(reverse(names));
+//    print(names);
+//
+//    print(reverse(names));
 
 
 // What are some of the operations supported by std::list?
