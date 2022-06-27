@@ -23,7 +23,25 @@
 // 	3. first use the data types in the standard library
 // 	4. later learn how each type is implemented
 
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+#include <vector>
+#include <list>
 
+#include "print.h"
+
+using namespace std;
+
+vector<string> reverse(vector<string> items) {
+
+    return items;
+
+}
+
+
+int main() {
 // List Data Type (4.1, 4.6, 4.9)
 
 // What's a List?
@@ -51,53 +69,66 @@
 
 // What does the program print?
 
-  List L1;
-  L1.append(1);
-  L1.append(2);
-  L1.append(4);
-  print(L1);
-
-	List L2;
-	for (int i = 0; i < L1.size(); i++)
-	    L2.insert(0, L1.get(i));
-	print(L2);
-
-	for (int i = 0; i < L1.size(); i++)
-	    L2.insert(2*i, L1.get(i));
-	print(L2);
-
-	for (int i = 0; i < L1.size(); i++)
-	    L2.set(i, L1.get(i));
-	print(L2);
-
-	int len = L2.size();
-	for (int i = 0; i < len; i++)
-	    L2.remove(i);
-	print(L2);
+//    List L1;
+//    L1.append(1);
+//    L1.append(2);
+//    L1.append(4);
+//    print(L1);
+//
+//    List L2;
+//    for (int i = 0; i < L1.size(); i++)
+//        L2.insert(0, L1.get(i));
+//    print(L2);
+//
+//    for (int i = 0; i < L1.size(); i++)
+//        L2.insert(2 * i, L1.get(i));
+//    print(L2);
+//
+//    for (int i = 0; i < L1.size(); i++)
+//        L2.set(i, L1.get(i));
+//    print(L2);
+//
+//    int len = L2.size();
+//    for (int i = 0; i < len; i++)
+//        L2.remove(i);
+//    print(L2);
 
 
 // Lists in the C++ Library
 
-	#include <vector>
-	std::vector
+//#include <vector>
+//    std::vector
 
-	#include <list>
-	std::list
+//#include <list>
+//    std::list
 
 // What are some of the operations supported by std::vector?
 
-	vector<string> junk;
+    vector <string> junk;
 
-	string stud = junk[1];
+    string stud = junk[1];
 
-	size_t size() const;
-	void push_back ( const ItemType& item );  // append
-	iterator erase ( iterator index );
-	iterator insert ( iterator index, const ItemType& item );
-	ItemType& at ( int index );
-	ItemType& operator[] ( int index );
+//    size_t size() const;
+//    void push_back(const ItemType &item);  // append
+//    iterator erase(iterator index);
+//    iterator insert(iterator index, const ItemType &item);
+//    ItemType &at(int index);
+//    ItemType &operator[](int index);
 
 // DEMO	(write reverse method using indexes)
+
+
+    vector<string> names;
+
+    names.emplace_back("Mary");
+    names.emplace_back("Jane");
+    names.emplace_back("Mark");
+    names.emplace_back("Mark");
+    names.emplace_back("John");
+
+    print(names);
+
+    print(reverse(names));
 
 
 // What are some of the operations supported by std::list?
@@ -114,8 +145,8 @@
 
 // How do you iterate over an array?
 
-	for (int i = 0; i < length; i++)
-	    print(array[i]);
+//    for (int i = 0; i < length; i++)
+//        print(array[i]);
 
 
 // How do you iterate over a list?
@@ -140,14 +171,12 @@
 
 // How do you create and use an Iterator on a list?
 
-// 	list<int> items;
-
-	list<int>::iterator i = items.begin();
-
-	while (i != items.end()) {
-	    cout << *i;
-	    i++;
-	}
+// 	  list<int> items;
+//    list<int>::iterator i = items.begin();
+//    while (i != items.end()) {
+//        cout << *i;
+//        i++;
+//    }
 
 
 // DEMO	(rewrite reverse using iterators)
@@ -159,6 +188,6 @@
 // A 'list' cannot do indexing, while a 'vector' can.
 // Why is a 'list' useful?
 
-
 // DEMO	(time for insert on vector vs list)
 
+}
